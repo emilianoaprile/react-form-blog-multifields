@@ -1,0 +1,109 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul, li, ol {
+  list-style: none;
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.formSection {
+  padding: 50px 0;
+}
+.container > h2 {
+  text-align: center;
+  color: white;
+}
+.formWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.formWrapper > input {
+  width: 72%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ccc;
+  background-color: rgb(232, 232, 232);
+  border-radius: 10px;
+}
+
+.btn {
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: rgba(129, 255, 97, 0.664);
+  cursor: pointer;
+}
+
+.titleList {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.btnRemove {
+  background-color: rgba(255, 0, 0, 0.664);
+  color: white;
+}
+
+.btnUpdate {
+  background-color: rgba(0, 38, 255, 0.664);
+  color: white;
+}
+
+.listMessage {
+  text-align: center;
+  padding: 20px 0;
+  font-weight: bold;
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}

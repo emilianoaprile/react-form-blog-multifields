@@ -52,7 +52,7 @@ function Form() {
     <>
       <section className="formSection">
         <div className="container-sm">
-          <h2>Aggiungi un titolo</h2>
+          <h2 className="title">Aggiungi un post</h2>
           <form onSubmit={handleSubmit}>
             <div className="formWrapper">
               <input
@@ -73,6 +73,7 @@ function Form() {
               />
 
               <textarea
+                className="formTextArea"
                 name="content"
                 placeholder="Inserisci il contenuto.."
                 value={formData.content}
@@ -81,6 +82,7 @@ function Form() {
               ></textarea>
 
               <select
+                className="formSelect"
                 name="category"
                 value={formData.category}
                 onChange={handleField}
@@ -93,11 +95,12 @@ function Form() {
                 <option value="Economia">Economia</option>
               </select>
 
-              <div>
-                <p>Tags:</p>
+              <div className="formTags">
+                <p className="formTagsTitle"><strong>Tags:</strong></p>
                 {tags.map((tag) => (
-                  <label key={tag}>
+                  <label className="formTagLabel" key={tag}>
                     <input
+                    className="formTagInput"
                       type="checkbox"
                       name="tags"
                       value={tag}
@@ -109,9 +112,10 @@ function Form() {
                 ))}
               </div>
 
-              <label htmlFor="published">
+              <label htmlFor="published" className="publishedLabel">
                 Pubblicato
                 <input
+                  className="publishedInput"
                   type="checkbox"
                   name="published"
                   id="published"
@@ -125,28 +129,34 @@ function Form() {
               </button>
             </div>
           </form>
-          
         </div>
       </section>
-      
-      <h2>Posts</h2>
-          <section>
-            <div className="container-lg">
-              <div className="posts">
-                {posts.map((p, index) => (
-                  <Card
-                    key={`post${index}`}
-                    title={p.title}
-                    imageUrl={p.image}
-                    content={p.content}
-                    category={p.category}
-                    tags={p.tags}
-                    published={p.published}
-                  />
-                ))}
-              </div>
+
+      {posts.length > 0 ? (
+        <section>
+          <h2 className="title">Posts</h2>
+
+          <div className="container-lg">
+            <div className="posts">
+              {posts.map((p, index) => (
+                <Card
+                  key={`post${index}`}
+                  title={p.title}
+                  imageUrl={p.image}
+                  content={p.content}
+                  category={p.category}
+                  tags={p.tags}
+                  published={p.published}
+                />
+              ))}
             </div>
-          </section>
+          </div>
+        </section>
+      ) : (
+        <div className="container-lg">
+          <p className="title">Nessun post aggiunto</p>
+        </div>
+      )}
     </>
   );
 }

@@ -12,6 +12,11 @@ ul, li, ol {
   list-style: none;
 }
 
+img {
+  width: 100%;
+  display: block;
+}
+
 body {
   background-color: black;
 }
@@ -47,8 +52,9 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-.formWrapper > input {
-  width: 72%;
+.formWrapper > input,
+.formSelect {
+  width: 100%;
   padding: 10px;
   border: none;
   outline: none;
@@ -105,4 +111,45 @@ body {
   background-color: #f0f0f0;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formTextArea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ccc;
+  background-color: rgb(232, 232, 232);
+  border-radius: 10px;
+  resize: none;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.title {
+  color: white;
+  text-align: center;
+  font-size: 38px;
+}
+
+
+.formTagLabel {
+  display: flex;
+  align-items: center; 
+}
+
+.formTagInput {
+  margin-right: 8px; 
+}
+
+.formTagsTitle {
+  margin-bottom: 10px;
+}
+
+.publishedLabel {
+  display: flex;
+  align-items: center;
+}
+
+.publishedInput {
+  margin-left: 8px; 
 }
